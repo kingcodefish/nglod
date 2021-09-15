@@ -34,8 +34,6 @@ from lib.PsDebugger import PsDebugger
 
 from lib.tracer.BaseTracer import BaseTracer
 
-from sol_nglod import aabb
-
 class SphereTracer(BaseTracer):
 
     def forward(self, net, ray_o, ray_d):

@@ -22,7 +22,6 @@
 import os
 import numpy as np
 import torch
-import sol_nglod
 
 from lib.spc3d import SPC3D, to_morton
 from lib.renderutils import voxel_sparsify, sample_surface

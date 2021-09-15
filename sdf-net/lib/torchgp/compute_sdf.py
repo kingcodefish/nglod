@@ -21,7 +21,7 @@
 
 import torch
 import numpy as np
-import mesh2sdf
+from mesh_to_sdf import mesh_to_sdf
 
 def compute_sdf(
     V : torch.Tensor,
@@ -35,6 +35,6 @@ def compute_sdf(
     mesh_cpu = mesh.cpu().numpy().reshape(-1).astype(np.float64)
 
     # Legacy, open source mesh2sdf code
-    dist = mesh2sdf.mesh2sdf_gpu(points.contiguous(), mesh)[0]
+    dist = mesh_to_sdf(mesh.cpu().numpy(), points.cpu().numpy())
     
     return dist

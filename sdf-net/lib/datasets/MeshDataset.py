@@ -25,7 +25,7 @@ import torch
 from torch.utils.data import Dataset
 
 import numpy as np
-import mesh2sdf
+import mesh_to_sdf
 
 from lib.torchgp import load_obj, point_sample, sample_surface, compute_sdf, normalize
 from lib.PsDebugger import PsDebugger
